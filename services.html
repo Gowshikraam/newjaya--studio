@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services | NEW JAYA STUDIO</title>
+<link rel="stylesheet" href="css/style.css" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fbe4e9, #e3d4f3);
+      overflow-x: hidden;
+      color: #333;
+      scroll-behavior: smooth;
+      position: relative;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(10px);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      animation: fadeInDown 1s;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      background: linear-gradient(45deg, #5c5aee, #2a2a72);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: 0.3s;
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 3px;
+      background: #5c5aee;
+      transition: width 0.3s;
+      margin-top: 5px;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .services {
+      padding: 60px 20px;
+      background: rgba(255, 255, 255, 0.3);
+      text-align: center;
+    }
+
+    .services h2 {
+      font-size: 2.8rem;
+      color: #2a2a72;
+      margin-bottom: 20px;
+    }
+
+    .services p {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Updated Attractive Photography & Videography Heading */
+    .services h3 {
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #00bcd4, #9c27b0); /* Teal to Purple Gradient */
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+      animation: gradientAnimation 3s ease infinite;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* 3D effect */
+      transition: transform 0.3s ease-in-out;
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 200% center;
+      }
+      50% {
+        background-position: 0% center;
+      }
+      100% {
+        background-position: 200% center;
+      }
+    }
+
+    .services h3:hover {
+      transform: scale(1.1);
+    }
+
+    .services h3 span {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 4px;
+      background: #00bcd4; /* Teal underline color */
+      border-radius: 2px;
+      animation: underlineAnimation 0.5s ease;
+    }
+
+    @keyframes underlineAnimation {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .service-card {
+      background: #ffffffcc;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      text-align: left;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      background: #fdfdff;
+    }
+
+    .service-card h4 {
+      color: #5c5aee;
+      margin-bottom: 10px;
+      font-size: 1.3rem;
+    }
+
+    .service-card p {
+      color: #555;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.2);
+      color: #444;
+      font-size: 0.9rem;
+      backdrop-filter: blur(5px);
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>NEW JAYA STUDIO</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="services">
+    <h2>Our Signature Services</h2>
+    <p><em>“Every picture tells a story — let's make yours unforgettable.”</em></p>
+
+    <!-- Photography & Videography Heading -->
+    <h3>📸 Photography & Videography
+      <span></span>
+    </h3>
+
+    <div class="service-grid">
+      <div class="service-card">
+        <h4>Wedding Photography & Videography</h4>
+        <p>Celebrate your love story with cinematic brilliance — moments that last forever.</p>
+      </div>
+
+      <div class="service-card">
+        <h4>Portrait Sessions</h4>
+        <p>Studio portraits that capture your essence — perfect for individuals, couples, and families.</p>
+      </div>
+
+      <div class="service-card">
+        <h4>Event Coverage</h4>
+        <p>From grand openings to intimate birthdays — we immortalize every highlight of your event.</p>
+      </div>
+
+      <div class="service-card">
+        <h4>Drone Photography</h4>
+        <p>Take your moments to new heights with stunning, cinematic aerial imagery.</p>
+      </div>
+    </div>
+
+    <!-- Specialized Shoots Heading -->
+    <h3>📸 Specialized Shoots
+      <span></span>
+    </h3>
+    <div class="service-grid">
+      <div class="service-card">
+        <h4>Baby & Kids Photography</h4>
+        <p>Tiny smiles, big memories. We create adorable, timeless portraits of your little ones.</p>
+      </div>
+
+      <div class="service-card">
+        <h4>Maternity Shoots</h4>
+        <p>Elegant and heartfelt portraits that honor the beautiful journey of motherhood.</p>
+      </div>
+
+      <div class="service-card">
+        <h4>Candid Photography</h4>
+        <p>Capture unscripted moments and raw emotions in their purest form.</p>
+      </div>
+
+      <div class="service-card">
+        <h4>Graduation / Convocation Shoots</h4>
+        <p>Capture proud academic moments in style.</p>
+      </div>
+    </div>
+
+    <!-- Professional Services Heading -->
+    <h3>📸 Professional Services
+      <span></span>
+    </h3>
+    <div class="service-grid">
+      <div class="service-card">
+        <h4>Product Photography</h4>
+        <p>Showcase your brand with crisp, high-quality images tailored for e-commerce and marketing.</p>
+      </div>
+
+      <div class="service-card">
+        <h4>Photo Albums & Prints</h4>
+        <p>Transform your memories into luxurious albums and premium prints to cherish forever.</p>
+      </div>
+
+      <div class="service-card">
+        <h4>Passport & ID Card Photos</h4>
+        <p>Fast, professional, and government-approved ID photos — precision and perfection guaranteed.</p>
+      </div>
+
+      <div class="service-card">
+        <h4>Photo Restoration</h4>
+        <p>Revive old memories — we restore and enhance faded, torn, or damaged photographs.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 NEW JAYA STUDIO | Kumbakonam</p>
+  </footer>
+</body>
+</html>

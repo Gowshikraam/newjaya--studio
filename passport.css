@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  color: #333;
+  padding: 20px;
+}
+
+/* Header Styling */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #d63384;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Information Banner */
+.info-box {
+  background: #fff3cd;
+  padding: 15px 20px;
+  border-left: 6px solid #ffc107;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  animation: slideIn 1s ease-in-out;
+}
+
+.info-box .highlight {
+  color: #c0392b;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+/* Gallery Grid */
+.lamination-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  padding: 10px 0;
+}
+
+/* Each Photo Block */
+.photo-block {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.photo-block h3 {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Image Styling */
+.photo-block img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect */
+.photo-block img:hover {
+  transform: scale(1.08) rotateZ(0.5deg);
+  filter: brightness(1.1) contrast(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
